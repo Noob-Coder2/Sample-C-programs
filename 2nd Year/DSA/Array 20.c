@@ -1,3 +1,4 @@
+/*Program for finding Matrix Determinant*/
 #include <stdio.h>
 
 float determinant(int n, float mat[n][n])
