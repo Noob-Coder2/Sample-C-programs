@@ -1,3 +1,5 @@
+/*Program to check the validity of Bracketed Arithmetic Expression using Stack*/
+
 #include <stdio.h>
 #include <string.h>
 #define max_size 100
@@ -31,7 +33,7 @@ int is_matching_pair(char char1, char char2)
 {
     if (char1 == '(' && char2 == ')')
     {
-        return 1;
+        return 1; // 1 = True
     }
 
     if (char1 == '{' && char2 == '}')
@@ -45,7 +47,7 @@ int is_matching_pair(char char1, char char2)
     }
     else
     {
-        return 0;
+        return 0; // 0 = False
     }
 }
 
@@ -62,7 +64,7 @@ int isBalnced(char *text)
         {
             if (top == -1)
             {
-                return 1;
+                return 0;
             }
             else if (!is_matching_pair(pop(), text[i]))
             {

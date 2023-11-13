@@ -1,4 +1,4 @@
-/*Program for Decimal to Binary Conversion*/
+/*Program for Decimal to Octal Conversion*/
 
 #include <stdio.h>
 #define size 20
@@ -45,9 +45,9 @@ int main()
     scanf("%d",&num);
     while (num >0)
     {
-        int m = num%2;
+        int m = num%8;
         push(m);
-        num=(num-m)/2;
+        num=(num-m)/8;
         n++;
     }
     display();
