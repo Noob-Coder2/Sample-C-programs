@@ -1,12 +1,13 @@
-/*Program for Decimal to Binary Conversion*/
+/*Program for Decimal to Hexadecimal Conversion*/
 
 #include <stdio.h>
 #define size 20
 
-int stack[size];
+char stack[size];
 int top = -1;
+char hex[16]= {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
 
-void push(int data)
+void push(char data)
 {
     if (top == size-1)
     {
@@ -25,7 +26,7 @@ int pop()
         printf("Stack Underflow");
         return -1;
     }
-    int data = stack[top];
+    char data = stack[top];
     top--;
     return data;
 }
@@ -34,7 +35,7 @@ void display()
 {
     for (int i = top; i>=0; i--)
     {
-        printf("%d",stack[i]);
+        printf("%c",stack[i]);
     }
 }
 
@@ -45,9 +46,9 @@ int main()
     scanf("%d",&num);
     while (num >0)
     {
-        int m = num%2;
-        push(m);
-        num=(num-m)/2;
+        int m = num%16;
+        push(hex[m]);
+        num=(num-m)/16;
         n++;
     }
     display();

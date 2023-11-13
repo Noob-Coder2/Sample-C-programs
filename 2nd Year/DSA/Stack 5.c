@@ -1,4 +1,4 @@
-/*Program for Decimal to Binary Conversion*/
+/*Program for Decimal to Any Base Conversion*/
 
 #include <stdio.h>
 #define size 20
@@ -34,20 +34,22 @@ void display()
 {
     for (int i = top; i>=0; i--)
     {
-        printf("%d",stack[i]);
+        printf("%d ",stack[i]);
     }
 }
 
 int main()
 {
-    int num,n=0;
+    int num,n=0,base;
     printf("Enter number :");
     scanf("%d",&num);
+    printf("Enter base : ");
+    scanf("%d",&base);
     while (num >0)
     {
-        int m = num%2;
+        int m = num%base;
         push(m);
-        num=(num-m)/2;
+        num=(num-m)/base;
         n++;
     }
     display();
