@@ -30,7 +30,7 @@ void main()
 */
 
 //Method 2
-/*
+
 void fibo(int n, int a, int b)
 {
     if (n==0)
@@ -49,32 +49,4 @@ void main()
     {
         fibo(i,a,b);
     }
-}*/
-
-
-//Method 3
-
-int fibo(int n)
-{
-    if (n==1||n==2)
-    {
-        return n-1;
-    }
-    else
-    {
-        return fibo(n-1) + fibo(n-2);
-    }
 }
-
-void  main()
-{
-    int i,n;
-    printf("Enter the range :");
-    scanf("%d",&n);
-    for (i = 0; i <=n; i++)
-    {
-        printf("%d\t",fibo(i));
-    }   
-}
-
-

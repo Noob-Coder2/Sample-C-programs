@@ -1,4 +1,3 @@
-/*Check whether an alphabet entered by the user is a vowel or a consonant.*/
 #include <stdio.h>
 #include <ctype.h>
 int main()
