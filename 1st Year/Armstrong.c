@@ -11,21 +11,15 @@ int main()
     for (i = n; i <= m; i++)
     {
 
-        int arm = 0, size = 0;
-        a = i;
+        int arm = 0, size;
         temp = i;
-        // find number of digits
-        while (a > 0)
-        {
-            a = a / 10;
-            size++;
-        }
+        size = log10(i)+1;
         // Calculate armstrong number
         while (temp > 0)
         {
             a = temp % 10;
             temp = temp/10;
-            arm = arm + pow(a, size);
+            arm = arm + pow(a, size);   
         }
         
         if (arm == i)
@@ -33,7 +27,6 @@ int main()
             printf("%d\t",i);
             c++;
         }
-        
     }
     printf("\n%d",c);
     return 0;

@@ -1,4 +1,4 @@
-/*x- x3/3! + x5/5! - x7/7!........ */
+/*1- x2/2! + x4/4! - x6/6!........*/
 
 #include <stdio.h>
 
@@ -11,7 +11,7 @@ int main()
     printf("Enter the angle :");
     scanf("%f",&x);
     x = x * 3.14/180;
-    float sum = x,num = x;
+    float sum = 1,num = 1;
     if (n==0)
     {
         printf("%d",0);
@@ -25,11 +25,10 @@ int main()
     for (i = 1; i<n; i++)
     {
         num = num*x*x;
-        den = den*(2*i+1)*(2*i);
+        den = den*(2*i-1)*(2*i);
         sum = sum + sign*(num/den);
         sign *= -1;
     }
     printf("%.3f",sum);
     return 0;
 }
-
